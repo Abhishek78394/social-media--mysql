@@ -1,0 +1,50 @@
+<%- include('./partials/header')%>
+<main>
+  <div class="container">
+    <form class="container m-auto" action="/signup" method="POST">
+      <h1 class="text-tomato mb-4">Register Now</h1>
+
+      <label>Name:</label>
+      <input
+        class="form-control"
+        id="name"
+        placeholder="Enter Name"
+        name="name"
+        type="text"
+      />
+      <label>username:</label>
+      <input
+        class="form-control"
+        id="username"
+        placeholder="Enter username"
+        name="username"
+        type="text"
+      />
+      <label>Email:</label>
+
+      <input
+        class="form-control"
+        id="email"
+        placeholder="Enter email"
+        name="email"
+        type="email"
+      />
+      <label>Password:</label>
+
+      <input
+        class="form-control"
+        id="password"
+        placeholder="Enter Password"
+        name="password"
+        type="password"
+      />
+
+      <button class="btn btn-dark btn-block tomato my-2 m_btn p-2 ps-5 pe-5">
+        Register
+      </button>
+    </form>
+
+    <p class="mt-3">Already have an account? <a href="/signin">Signin</a></p>
+  </div>
+</main>
+<%- include('./partials/footer')%>

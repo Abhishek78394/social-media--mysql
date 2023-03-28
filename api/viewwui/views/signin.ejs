@@ -1,0 +1,28 @@
+<%- include('./partials/header')%>
+
+
+<main>
+     <div  class="container  mt-3 " >
+     <form class="form-control" action="/signin" method="POST">
+   
+             <label class="form-label">username:</label>
+             <input  name="username" class="form-control" type="text" placeholder="enter your username" autofocus>
+             <label class="form-label">Password:</label>
+             <input id="pass" name="password" class="form-control" type="password" placeholder="enter your password">
+            
+                 
+                
+             <button class="btn btn-primary my-3">login now</button>
+        
+     </form>
+     <div class="info_div my-3">
+         <p  >Don't have an account? 
+             <a class="btn btn-outline-primary" href="/">sign up </a></p>
+     </div><div class="info_div">
+     </div>
+        
+        
+        </div> 
+ </main>
+ <%- include("partials/footer") %>
+ 

@@ -1,0 +1,24 @@
+<%- include('./partials/header')%>
+
+
+<main>
+     <div  class="container  mt-3 " >
+     <form class="form-control" action="/createPost" method="POST" enctype="multipart/form-data">
+   
+             <label class="form-label">Description:</label>
+             <input  name="desc" class="form-control" type="text" placeholder="enter your Description" autofocus>
+             <label class="form-label">Choosee Image:</label>
+             <input id="img" name="img" class="form-control" type="file" placeholder="enter your Image">
+            
+                 
+                
+             <button class="btn btn-primary my-3">Crteate  Post</button>
+        
+     </form>
+    
+        
+        
+        </div> 
+ </main>
+ <%- include("partials/footer") %>
+ 

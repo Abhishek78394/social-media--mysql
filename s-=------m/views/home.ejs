@@ -1,0 +1,53 @@
+<%- include('./partials/header')%> 
+<style>
+    #create{
+      width: 100vw;;
+   
+    }
+    #cp{
+        margin-left: 10vw;
+    }
+    #comm{
+height: 40vh; 
+overflow-x: auto; 
+  }
+  #box{
+    width: 35vw;
+    height: 60vh;
+   
+  }
+  #out{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3vw;
+  }
+
+</style>
+ <div id="create" class="w-100 d-flex my-3 mx-5"><a id="cp"   href="/createPost" " class="btn  btn-outline-primary">Create Post</a>
+</div>
+<div class="container" >
+<ul id="out">
+  <% posts.forEach(function(post){ %>
+    <li class="card py-2 px-4 " id="box" >
+<a class=" btn btn-outline-primary btn-sm w-25" href="/delete/<%= post.id%>">delete</a>
+    <h2 class="d-inline-flex p-2 "><p ><%= post.name%> &nbsp;&nbsp; </p>  |&nbsp;&nbsp;  <p>   <%= post.desc%></p></h2>
+    <h2>
+        <img
+            height="120"
+            width="200"
+           ` src="../uploads/<%= post.img%>"`
+            alt="imgggggggg"
+        />
+            
+    </h2>
+  
+   
+
+    <a  class="btn btn-outline-primary w-50 m-auto" href="/comments/<%= post.id%>"> comment</a>
+     
+  
+</li>
+<%})%>
+</ol>
+</div>
+<%- include('./partials/footer')%>

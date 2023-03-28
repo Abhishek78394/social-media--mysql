@@ -1,0 +1,26 @@
+<%- include('./partials/header')%> 
+
+<div class="container w-50 m-auto">
+        <ol>
+        <li class="post">
+        <h2 class="d-inline-flex p-2 "><p ><%= post.name%> &nbsp;&nbsp; </p>  |&nbsp;&nbsp;  <p>   <%= post.desc%></p></h2>
+        <h2>
+            <img
+               
+                width="300"
+               ` src="../uploads/<%= post.img%>"`
+                alt="imgggggggg"
+            />      
+        </h2>
+        <div class="w-50"> 
+        <form class="form-control" action='/comments/<%= post.id%>' method="POST">
+            <input  name="desc" class="form-control" type="text" placeholder="enter your description" autofocus>
+            <button class="btn btn-primary my-3">comment</button>
+            </form>
+        </div>
+   </li>
+        </ol>    
+</div>
+
+
+<%- include('./partials/footer')%>
